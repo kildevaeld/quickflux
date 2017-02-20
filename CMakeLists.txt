@@ -59,5 +59,5 @@ set(HEADERS
 
 add_library(quickflux ${SOURCES})
 
-target_link_libraries(quickflux Qt5::Qml Qt5::Quick Qt5::Core eventbus)
+target_link_libraries(quickflux Qt5::Qml Qt5::Quick Qt5::Core)
 target_include_directories(quickflux PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
