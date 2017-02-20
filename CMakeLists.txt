@@ -7,6 +7,8 @@ find_package(Qt5Core REQUIRED)
 find_package(Qt5Quick REQUIRED)
 find_package(Qt5Qml REQUIRED)
 
+include_directories(${Qt5Qml_INCLUDE_DIRS})
+
 qt5_wrap_cpp(moc 
     priv/qflistener.h
     priv/qfappscriptrunnable.h
@@ -59,5 +61,5 @@ set(HEADERS
 
 add_library(quickflux ${SOURCES})
 
-target_link_libraries(quickflux Qt5::Qml Qt5::Quick Qt5::Core)
+target_link_libraries(quickflux PUBLIC Qt5::Qml Qt5::Quick Qt5::Core)
 target_include_directories(quickflux PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
