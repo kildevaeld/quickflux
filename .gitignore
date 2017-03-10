@@ -37,3 +37,5 @@ build-*
 html
 build
 vendor
+
+.DS_Store

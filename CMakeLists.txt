@@ -19,6 +19,7 @@ qt5_wrap_cpp(moc
     qfappscriptgroup.h
     qffilter.h
     qfkeytable.h
+    OPTIONS -I ${Qt5Qml_INCLUDE_DIRS}
 )
 
 set(SOURCES
