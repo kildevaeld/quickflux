@@ -13,6 +13,8 @@ qt5_wrap_cpp(moc
     priv/qflistener.h
     priv/qfappscriptrunnable.h
     priv/qfappscriptdispatcherwrapper.h
+    priv/qfhook.h
+    priv/qfmiddlewareshook.h
     qfactioncreator.h
     qfappdispatcher.h
     qfapplistener.h
@@ -21,6 +23,11 @@ qt5_wrap_cpp(moc
     qfappscriptgroup.h
     qffilter.h
     qfkeytable.h
+    qfmiddleware.h
+    qfmiddlewarelist.h
+    qfobject.h
+    qfstore.h
+    qfhydrate.h
 )
 
 set(SOURCES
@@ -37,7 +44,16 @@ set(SOURCES
     qffilter.cpp
     qfkeytable.cpp
     priv/qfsignalproxy.cpp
+    priv/qfhook.cpp
+    priv/qfmiddlewareshook.cpp
+    priv/quickfluxfunctions.cpp
     qfactioncreator.cpp
+    qfmiddleware.cpp
+    qfmiddlewarelist.cpp
+    qfobject.cpp
+    qfstore.cpp
+    qfhydrate.cpp
+
 )
 
 set(HEADERS
