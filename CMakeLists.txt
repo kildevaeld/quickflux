@@ -7,6 +7,13 @@ find_package(Qt5Core REQUIRED)
 find_package(Qt5Quick REQUIRED)
 find_package(Qt5Qml REQUIRED)
 
+SET(include_list "")
+FOREACH(file_path ${Qt5Qml_INCLUDE_DIRS})
+  SET(include_list ${include_list} -I${file_path})
+ENDFOREACH()
+
+
+
 qt5_wrap_cpp(moc 
     priv/qflistener.h
     priv/qfappscriptrunnable.h
@@ -19,7 +26,7 @@ qt5_wrap_cpp(moc
     qfappscriptgroup.h
     qffilter.h
     qfkeytable.h
-    OPTIONS -I ${Qt5Qml_INCLUDE_DIRS}
+    OPTIONS ${include_list}
 )
 
 set(SOURCES
